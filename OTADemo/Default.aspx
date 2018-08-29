@@ -9,7 +9,7 @@
         </div>
 
         <div class="col-md-6">
-            <a href="http://uat-xml.gorentals.nz" class="btn btn-primary ">Dowload Demo Application</a>
+            <a href="https://github.com/gorentalsxml/OTADemo" class="btn btn-primary ">View Source &raquo;</a>
             <asp:Button ID="btnDownloadOta" runat="server" CssClass="btn btn-primary" Text="Dowload OTA Schema" OnClick="DownLoadSchema_Click"></asp:Button>
         </div>
     </div>
