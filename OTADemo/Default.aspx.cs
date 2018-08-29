@@ -91,7 +91,7 @@ namespace OTADemo
                     StreamContent content = new StreamContent(ms);
                     content.Headers.ContentType = new MediaTypeHeaderValue("application/xml");
                     content.Headers.ContentEncoding.Add("gzip");
-                    HttpResponseMessage response = client.PostAsync($"http://localhost:56887/{operation.SelectedValue}", content).Result;
+                    HttpResponseMessage response = client.PostAsync($"https://uat-xml.gorentals.nz/{operation.SelectedValue}", content).Result;
                     var result =  response.Content.ReadAsStringAsync().Result;
                     txtResponse.Text = result;
                 }
