@@ -1,16 +1,13 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="false" CodeBehind="Default.aspx.cs" Inherits="OTADemo._Default" ValidateRequest="false" Debug="true" %>
+﻿<%@ Page Title="GO Rentals XML integration demo" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="false" CodeBehind="Default.aspx.cs" Inherits="OTADemo._Default" ValidateRequest="false" Debug="true" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
-        <h1>GO Rentals OTA Demo Application</h1>
+        <h1>GO Rentals XML integration demo</h1>
         
-        <div class="col-md-6">
-            <p><a href="https://uat-xml.gorentals.nz" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-        </div>
-
-        <div class="col-md-6">
-            <a href="https://github.com/gorentalsxml/OTADemo" class="btn btn-primary ">View Source &raquo;</a>
-            <asp:Button ID="btnDownloadOta" runat="server" CssClass="btn btn-primary" Text="Download XSD File" OnClick="DownLoadSchema_Click"></asp:Button>
+        <div class="col-md-12">
+            <a href="https://uat-xml.gorentals.nz" class="btn btn-primary" target="_blank">View XML metadata &raquo;</a>
+            <a href="https://github.com/gorentalsxml/OTADemo" class="btn btn-primary"  target="_blank">View source &raquo;</a>
+            <asp:Button ID="btnDownloadOta" runat="server" CssClass="btn btn-primary" Text="Download XSD files" OnClick="DownLoadSchema_Click"></asp:Button>
         </div>
     </div>
 
