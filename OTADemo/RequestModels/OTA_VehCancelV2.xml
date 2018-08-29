@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OTA_VehCancelRQ xmlns="http://www.opentravel.org/OTA/2003/05" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_VehCancelRQ.xsd" ApiVersion="v2">
+  <POS>
+    <Source>
+      <RequestorID Type="16" ID="YOUR_REQUESTOR_ID_PROVIDED_BY_GORENTALS" ID_Context="GORENTALS" />
+    </Source>
+  </POS>
+  <VehCancelRQCore>
+    <Rentalid>GO RENTALS RESERVATION NUMBER</Rentalid>
+  </VehCancelRQCore>
+</OTA_VehCancelRQ>

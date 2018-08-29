@@ -198,10 +198,14 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="RequestModels\OTA_Ping.xml" />
+    <Content Include="RequestModels\OTA_PingV2.xml" />
     <Content Include="RequestModels\OTA_VehAvailRateV2.xml" />
     <Content Include="RequestModels\OTA_VehAvailRate.xml" />
     <Content Include="RequestModels\OTA_VehCancel.xml" />
+    <Content Include="RequestModels\OTA_VehCancelV2.xml" />
     <Content Include="RequestModels\OTA_VehLocSearch.xml" />
+    <Content Include="RequestModels\OTA_VehLocSearchV2.xml" />
     <Content Include="RequestModels\OTA_VehResV2.xml" />
     <Content Include="RequestModels\OTA_VehRes.xml" />
     <Content Include="Scripts\bootstrap.js" />

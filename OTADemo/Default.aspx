@@ -27,10 +27,11 @@
             <div class="col-sm-10">
                 <asp:DropDownList ID="operation" runat="server" ClientIDMode="Static" AutoPostBack="true" CssClass="form-control" OnSelectedIndexChanged="Operation_SelectedIndexChanged">
                     <asp:ListItem Text="" Value=""></asp:ListItem>
+                    <asp:ListItem Text="OTA_Ping" Value="OTA_Ping"></asp:ListItem>
                     <asp:ListItem Text="OTA_VehAvailRate" Value="OTA_VehAvailRate"></asp:ListItem>
-                    <asp:ListItem Text="OTA_VehRes" Value="OTA_VehRes"></asp:ListItem>
                     <asp:ListItem Text="OTA_VehCancel" Value="OTA_VehCancel"></asp:ListItem>
                     <asp:ListItem Text="OTA_VehLocSearch" Value="OTA_VehLocSearch"></asp:ListItem>
+                    <asp:ListItem Text="OTA_VehRes" Value="OTA_VehRes"></asp:ListItem>
                 </asp:DropDownList>
             </div>
         </div>
