@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OTA_VehAvailRateRQ xmlns="http://www.opentravel.org/OTA/2003/05" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_VehAvailRateRQ.xsd" ApiVersion="v2">
+  <POS>
+    <Source>
+      <RequestorID Type="16" ID="YOUR_REQUESTOR_ID_PROVIDED_BY_GORENTALS" ID_Context="GORENTALS" />
+    </Source>
+  </POS>
+  <VehAvailRQCore>
+    <VehRentalCore PickUpDateTime="2018-10-01T07:00:00" ReturnDateTime="2018-10-30T19:00:00">
+      <PickUpLocation ExtendedLocationCode="31" />
+      <ReturnLocation ExtendedLocationCode="13" />
+    </VehRentalCore>
+    <DriverType Age="26"/>
+  </VehAvailRQCore>
+</OTA_VehAvailRateRQ>

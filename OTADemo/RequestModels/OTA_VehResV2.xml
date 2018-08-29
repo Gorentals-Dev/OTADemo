@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OTA_VehResRQ xmlns="http://www.opentravel.org/OTA/2003/05" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_VehResRQ.xsd" ApiVersion="v2">
+  <POS>
+    <Source>
+      <RequestorID Type="16" ID="YOUR_REQUESTOR_ID_PROVIDED_BY_GORENTALS" ID_Context="GORENTALS" />
+    </Source>
+    <Source>
+      <RequestorID Type="16" ID="YOUR_AGENT_REF_ID" ID_Context="ClientReferenceNumber" />
+    </Source>
+  </POS>
+  <VehResRQCore>
+    <VehRentalCore PickUpDateTime="2018-11-01T10:00:00" ReturnDateTime="2018-11-14T19:30:00">
+      <PickUpLocation ExtendedLocationCode="31" />
+      <ReturnLocation ExtendedLocationCode="13" />
+    </VehRentalCore>
+    <Customer>
+      <Primary>
+        <PersonName>
+          <GivenName>Xml</GivenName>
+          <Surname>Test</Surname>
+        </PersonName>
+        <Telephone PhoneNumber="+6495555828"/>
+        <Email>xml.test@somewhere.com</Email>
+        <CitizenCountryName Code="AU"/>
+      </Primary>
+    </Customer>
+    <DriverType Age="26"/>
+    <VehPref>
+      <VehMakeModel Code="HCAV" />
+    </VehPref>
+    <SpecialEquipPrefs>
+      <SpecialEquipPref EquipType="9" Quantity="1"/>
+    </SpecialEquipPrefs>
+  </VehResRQCore>
+  <VehResRQInfo>
+    <ArrivalDetails TransportationCode="14" Number="118">
+      <OperatingCompany>NZ</OperatingCompany>
+    </ArrivalDetails>
+
+    <CoveragePrefs>
+      <CoveragePref CoverageType="241"/>
+    </CoveragePrefs>
+  </VehResRQInfo>
+</OTA_VehResRQ>
