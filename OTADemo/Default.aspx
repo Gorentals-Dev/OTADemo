@@ -10,7 +10,7 @@
 
         <div class="col-md-6">
             <a href="https://github.com/gorentalsxml/OTADemo" class="btn btn-primary ">View Source &raquo;</a>
-            <asp:Button ID="btnDownloadOta" runat="server" CssClass="btn btn-primary" Text="Dowload OTA Schema" OnClick="DownLoadSchema_Click"></asp:Button>
+            <asp:Button ID="btnDownloadOta" runat="server" CssClass="btn btn-primary" Text="Download XSD File" OnClick="DownLoadSchema_Click"></asp:Button>
         </div>
     </div>
 
@@ -40,7 +40,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="email">Header:</label>
             <div class="col-sm-10">
-                <asp:TextBox TextMode="MultiLine" Rows="2" ReadOnly runat="server" CssClass="form-control" ID="header" Text="Content-Type: application/xml"></asp:TextBox>
+                <asp:TextBox TextMode="MultiLine" Rows="2" ReadOnly runat="server" CssClass="form-control" ID="header" Text="Content-Type: application/xml, Content-Encoding:gzip"></asp:TextBox>
             </div>
         </div>
         <div class="form-group">

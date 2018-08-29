@@ -202,6 +202,7 @@
     <None Include="OTAXSD\OTA_VehResRS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\PublishProfiles\v2-uat-xmldemo-as - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="RequestModels\OTA_VehAvailRateV2.xml" />
     <Content Include="RequestModels\OTA_VehAvailRate.xml" />
