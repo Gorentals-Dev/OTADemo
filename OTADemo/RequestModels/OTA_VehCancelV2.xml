@@ -6,6 +6,6 @@
     </Source>
   </POS>
   <VehCancelRQCore>
-    <Rentalid>GO RENTALS RESERVATION NUMBER</Rentalid>
+    <UniqueID ID = "GO RENTALS RESERVATION NUMBER" Type = "8"/>
   </VehCancelRQCore>
 </OTA_VehCancelRQ>
