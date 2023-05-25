@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "e9f322e9-2227-4020-aa08-6275f8068099",
+		"name": "GO Rentals XML",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25013137"
+	},
+	"item": [
+		{
+			"name": "OTA_Ping",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\r\n<OTA_PingRQ xmlns=\"http://www.opentravel.org/OTA/2003/05\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.opentravel.org/OTA/2003/05 OTA_PingRQ.xsd\">\r\n  <EchoData>Test Ping</EchoData>\r\n</OTA_PingRQ>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostUrl}}/OTA_Ping",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"OTA_Ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OTA_VehLocSearch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\r\n<OTA_VehLocSearchRQ xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://www.opentravel.org/OTA/2003/05\" xsi:schemaLocation=\"http://www.opentravel.org/OTA/2003/05 OTA_VehLocSearchRQ.xsd\" ApiVersion=\"v2\">\r\n  <POS>\r\n    <Source>\r\n      <RequestorID Type=\"16\" ID=\"{{requestorID}}\" ID_Context=\"GORENTALS\" />\r\n    </Source>\r\n  </POS>\r\n</OTA_VehLocSearchRQ>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostUrl}}/OTA_VehLocSearch",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"OTA_VehLocSearch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OTA_VehAvailRate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<OTA_VehAvailRateRQ xmlns=\"http://www.opentravel.org/OTA/2003/05\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.opentravel.org/OTA/2003/05 OTA_VehAvailRateRQ.xsd\" ApiVersion=\"v2\">\r\n  <POS>\r\n    <Source>\r\n      <RequestorID Type=\"16\" ID=\"{{requestorID}}\" ID_Context=\"GORENTALS\" />\r\n    </Source>\r\n  </POS>\r\n  <VehAvailRQCore>\r\n    <VehRentalCore PickUpDateTime=\"{{puDateTime}}\" ReturnDateTime=\"{{doDateTime}}\">\r\n      <PickUpLocation ExtendedLocationCode=\"31\" />\r\n      <ReturnLocation ExtendedLocationCode=\"31\" />\r\n    </VehRentalCore>\r\n    <DriverType Age=\"26\"/>\r\n  </VehAvailRQCore>\r\n</OTA_VehAvailRateRQ>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostUrl}}/OTA_VehAvailRate",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"OTA_VehAvailRate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OTA_VehRes",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<OTA_VehResRQ xmlns=\"http://www.opentravel.org/OTA/2003/05\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.opentravel.org/OTA/2003/05 OTA_VehResRQ.xsd\">\r\n    <POS>\r\n        <Source>\r\n            <RequestorID Type=\"16\" ID=\"{{requestorID}}\" ID_Context=\"GORENTALS\"/>\r\n        </Source>\r\n        <Source>\r\n            <RequestorID Type=\"16\" ID=\"{{randomReferenceNumber}}\" ID_Context=\"ClientReferenceNumber\"/>\r\n        </Source>\r\n    </POS>\r\n    <VehResRQCore>\r\n        <VehRentalCore PickUpDateTime=\"{{puDateTime}}\" ReturnDateTime=\"{{doDateTime}}\">\r\n            <PickUpLocation ExtendedLocationCode=\"31\"/>\r\n            <ReturnLocation ExtendedLocationCode=\"31\"/>\r\n        </VehRentalCore>\r\n        <Customer>\r\n            <Primary>\r\n                <PersonName>\r\n                    <GivenName>{{$randomFirstName}}</GivenName>\r\n                    <Surname>{{$randomLastName}}</Surname>\r\n                </PersonName>\r\n                <Telephone PhoneNumber=\"{{$randomPhoneNumber}}\"/>\r\n                <Email>{{$randomEmail}}</Email>\r\n                <CitizenCountryName Code=\"{{$randomCountryCode}}\"/>\r\n            </Primary>\r\n        </Customer>\r\n        <DriverType Age=\"30\"/>\r\n        <VehPref>\r\n            <VehMakeModel Code=\"CDAV\"/>\r\n        </VehPref>\r\n        <SpecialEquipPrefs>\r\n        </SpecialEquipPrefs>\r\n    </VehResRQCore>\r\n    <VehResRQInfo>\r\n        <ArrivalDetails TransportationCode=\"14\" Number=\"286\">\r\n            <OperatingCompany>SQ</OperatingCompany>\r\n        </ArrivalDetails>\r\n    </VehResRQInfo>\r\n</OTA_VehResRQ>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostUrl}}/OTA_VehRes",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"OTA_VehRes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OTA_VehCancel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<OTA_VehCancelRQ xmlns=\"http://www.opentravel.org/OTA/2003/05\" \r\n                 xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" \r\n                 xsi:schemaLocation=\"http://www.opentravel.org/OTA/2003/05 OTA_VehCancelRQ.xsd\" \r\n                 ApiVersion=\"v2\">\r\n<POS>\r\n    <Source>\r\n    <RequestorID Type=\"16\" ID=\"{{requestorID}}\" ID_Context=\"GORENTALS\" />\r\n    </Source>\r\n</POS>\r\n<VehCancelRQCore>\r\n    <UniqueID ID=\"RENTAL_ID_TO_BE_CANCELLED\" Type=\"8\"/>\r\n</VehCancelRQCore>\r\n</OTA_VehCancelRQ>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostUrl}}/OTA_VehCancel",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"OTA_VehCancel"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"let puDate = new Date(); // current date",
+					"puDate.setMonth(puDate.getMonth() + 3); // add 3 months to current date",
+					"",
+					"let getPUYear = puDate.toLocaleString(\"default\", { year: \"numeric\" });",
+					"let getPUMonth = puDate.toLocaleString(\"default\", { month: \"2-digit\" });",
+					"let getPUDay = puDate.toLocaleString(\"default\", { day: \"2-digit\" });",
+					"",
+					"let puDateFormatted = getPUYear + \"-\" + getPUMonth + \"-\" + getPUDay + 'T10:00:00';",
+					"pm.globals.set(\"puDateTime\", puDateFormatted);",
+					"",
+					"let doDate = new Date(); // current date",
+					"doDate.setMonth(doDate.getMonth() + 4); // add 4 months to current date",
+					"",
+					"let getDOYear = doDate.toLocaleString(\"default\", { year: \"numeric\" });",
+					"let getDOMonth = doDate.toLocaleString(\"default\", { month: \"2-digit\" });",
+					"let getDODay = doDate.toLocaleString(\"default\", { day: \"2-digit\" });",
+					"",
+					"let doDateFormatted = getDOYear + \"-\" + getDOMonth + \"-\" + getDODay + 'T15:00:00';",
+					"pm.globals.set(\"doDateTime\", doDateFormatted);",
+					"",
+					"var randomNumber = Math.floor(Math.random() * 9000000) + 1000000;",
+					"pm.globals.set(\"randomReferenceNumber\", randomNumber);",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "hostUrl",
+			"value": "https://uat-xml.gorentals.nz",
+			"type": "string"
+		},
+		{
+			"key": "requestorID",
+			"value": "YOUR_REQUESTOR_ID",
+			"type": "string"
+		}
+	]
+}
