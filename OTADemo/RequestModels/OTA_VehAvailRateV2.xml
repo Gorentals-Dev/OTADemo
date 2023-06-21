@@ -6,7 +6,7 @@
     </Source>
   </POS>
   <VehAvailRQCore>
-    <VehRentalCore PickUpDateTime="2018-10-01T07:00:00" ReturnDateTime="2018-10-30T19:00:00">
+    <VehRentalCore PickUpDateTime="2023-10-01T07:00:00" ReturnDateTime="2023-10-30T19:00:00">
       <PickUpLocation ExtendedLocationCode="31" />
       <ReturnLocation ExtendedLocationCode="13" />
     </VehRentalCore>
