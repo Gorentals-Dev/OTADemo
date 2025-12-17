@@ -32,6 +32,7 @@
                     <asp:ListItem Text="OTA_VehCancel" Value="OTA_VehCancel"></asp:ListItem>
                     <asp:ListItem Text="OTA_VehLocSearch" Value="OTA_VehLocSearch"></asp:ListItem>
                     <asp:ListItem Text="OTA_VehRes" Value="OTA_VehRes"></asp:ListItem>
+                    <asp:ListItem Text="OTA_VehRetRes" Value="OTA_VehRetRes"></asp:ListItem>
                 </asp:DropDownList>
             </div>
         </div>
