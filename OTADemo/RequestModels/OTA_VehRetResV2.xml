@@ -3,12 +3,9 @@
     <POS>
         <Source>
             <RequestorID Type="16" ID="YOUR_REQUESTOR_ID_PROVIDED_BY_GORENTALS" ID_Context="GORENTALS" />
-        </Source>
-        <Source>
-            <RequestorID Type="16" ID="YOUR_AGENT_REF_ID" ID_Context="ClientReferenceNumber" />
-        </Source>
+        </Source>       
     </POS>
     <VehRetResRQCore>
-        <UniqueID ID="YOUR_AGENT_REF_ID" Type="38"/>
+        <UniqueID ID="YOUR_AGENT_REF_ID" Type="16"/>
     </VehRetResRQCore>
 </OTA_VehRetResRQ>
