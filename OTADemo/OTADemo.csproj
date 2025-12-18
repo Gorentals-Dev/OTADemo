@@ -197,6 +197,12 @@
     <None Include="OTAXSD\OTA_VehResRS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="OTAXSD\OTA_VehRetResRQ.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OTAXSD\OTA_VehRetResRS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="RequestModels\OTA_Ping.xml" />
     <Content Include="RequestModels\OTA_PingV2.xml" />
@@ -208,6 +214,8 @@
     <Content Include="RequestModels\OTA_VehLocSearchV2.xml" />
     <Content Include="RequestModels\OTA_VehResV2.xml" />
     <Content Include="RequestModels\OTA_VehRes.xml" />
+    <Content Include="RequestModels\OTA_VehRetRes.xml" />
+    <Content Include="RequestModels\OTA_VehRetResV2.xml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
